@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clovers - Find Discounts & Shop</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Deals</a>
+        <a href="#">My Orders</a>
+        <a href="#">Customer Support</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Clovers</h1>
+        <p>Your destination to find discounts and shop from top brands.</p>
+        
+        <!-- Search Bar Section -->
+        <div class="search-container">
+            <input type="text" id="search" class="search-bar" placeholder="Search for discounts...">
+            <button class="search-button" onclick="searchForDiscounts()">Search</button>
+        </div>
+        
+        <!-- Discount Counter Notification for Available Discounts -->
+        <div id="availableDiscounts" class="discount-counter">
+            Available Discounts: <span id="availableDiscountsNumber">0</span>
+        </div>
+
+        <!-- Discount Counter Notification for Discounts Found after Search -->
+        <div id="discountNotification" class="discount-counter" style="display: none;">
+            Discounts Found: <span id="discountNumber">0</span>
+        </div>
+    </header>
+
+</body>
+</html>
