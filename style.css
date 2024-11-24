@@ -1,0 +1,141 @@
+/* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #2d72d9, #ff6f61);
+            color: white;
+        }
+        
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 50px 20px 80px 20px; /* Increased bottom padding (80px) */
+            background-color: rgba(0, 0, 0, 0.7);
+            border-bottom: 5px solid #ff6f61;
+            position: relative;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Search bar inside header */
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .search-bar {
+            padding: 12px;
+            font-size: 1.1em;
+            width: 250px;
+            border-radius: 25px;
+            border: none;
+            margin-right: 10px;
+            outline: none;
+            
+            background-color: white;
+            color: #333;
+        }
+        .search-button {
+            padding: 12px 20px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #ff4c42;
+        }
+
+         /* Discount counter notification inside the header */
+        .discount-counter {
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 150px;
+            left: 20px;
+            opacity: 0;
+            transform: scale(0);
+            animation: colorChange 10s ease infinite, countUp 0.5s forwards;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Keyframe animation to change colors */
+        @keyframes colorChange {
+            0% {
+                background-color: #2d72d9; /* Blue */
+            }
+            25% {
+                background-color: #ff6f61; /* Red */
+            }
+            50% {
+                background-color: #32cd32; /* Green */
+            }
+            75% {
+                background-color: #800080; /* Purple */
+            }
+            100% {
+                background-color: #2d72d9; /* Back to Blue */
+            }
+        }
+
+        /* Count-up animation */
+        @keyframes countUp {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+                background-color: #ff6f61;
+            }
+            25% {
+                background-position: 100% 50%;
+                background-color: #ff6347;
+            }
+            50% {
+                background-position: 100% 50%;
+                background-color: #ff1493;
+            }
+            75% {
+                background-position: 0% 50%;
+                background-color: #00bfff;
+            }
+            100% {
+                background-position: 100% 50%;
+                background-color: #7c4dff;
+            }
+        }
+
+        /* Fade In effect for the search result notification */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
